@@ -9,6 +9,7 @@ function preload() {
 }
 
 function setup() {
+  fullscreen(true);
   if (windowWidth > windowHeight) {
     d = windowHeight;
   } else {
