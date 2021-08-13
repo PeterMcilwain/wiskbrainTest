@@ -9,8 +9,6 @@ function preload() {
 }
 
 function setup() {
-   var cnv = createCanvas(windowWidth, windowHeight);
-  cnv.style('display', 'block');
   if (windowWidth > windowHeight) {
     d = windowHeight;
   } else {
