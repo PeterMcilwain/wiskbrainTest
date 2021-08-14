@@ -40,9 +40,10 @@ function setup() {
 function draw() {
   background(255);
   getSector();
-  image(faces[img], x, y, d, d);
-  getBrain();
-   image(brains[t], x + (bCoords[img].x * b), y + (bCoords[img].y * b), b, b);
+  image(faces[img], 0, 0);
+//  image(faces[img], x, y, d, d);
+ // getBrain();
+ //  image(brains[t], x + (bCoords[img].x * b), y + (bCoords[img].y * b), b, b);
 }
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
