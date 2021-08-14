@@ -16,7 +16,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   //fullscreen(true);
-  getDrawPosition();
+  //getDrawPosition();
 
   bCoords[0] = createVector(3, 2);
   bCoords[1] = createVector(3, 3);
@@ -38,39 +38,38 @@ function setup() {
   bCoords[17] = createVector(4, 2);
 }
 function draw() {
-  background(255);
-  getSector();
-  image(faces[img], 0, 0);
-//  image(faces[img], x, y, d, d);
- // getBrain();
- //  image(brains[t], x + (bCoords[img].x * b), y + (bCoords[img].y * b), b, b);
+  background(0);
+  //getSector();
+  //image(faces[img], x, y, d, d);
+  //getBrain();
+  // image(brains[t], x + (bCoords[img].x * b), y + (bCoords[img].y * b), b, b);
 }
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  getDrawPosition();
-}
-function getDrawPosition() {
-  if (windowWidth > windowHeight) {
-    d = windowHeight;
-  } else {
-    d = windowWidth;
-  }
-  b = d / 7;
-  x = (windowWidth - d) / 2;
-  y = (windowHeight - d) / 2;
-}
-function getSector() {
-  var a = atan2(mouseY-height/2, mouseX-width/2);
-  img = (int(map(a, PI, -PI, 0, 17)) + 1) % 18;
-}
-function getBrain() {
-  if (frameCount % 6 == 0) {
-    t ++;
-    if (t > 3) {
-      t = 0;
-    }
-  }
-}
+//function windowResized() {
+//  resizeCanvas(windowWidth, windowHeight);
+//  getDrawPosition();
+//}
+//function getDrawPosition() {
+//  if (windowWidth > windowHeight) {
+//    d = windowHeight;
+//  } else {
+//    d = windowWidth;
+//  }
+//  b = d / 7;
+//  x = (windowWidth - d) / 2;
+//  y = (windowHeight - d) / 2;
+//}
+//function getSector() {
+//  var a = atan2(mouseY-height/2, mouseX-width/2);
+//  img = (int(map(a, PI, -PI, 0, 17)) + 1) % 18;
+//}
+//function getBrain() {
+//  if (frameCount % 6 == 0) {
+//    t ++;
+//    if (t > 3) {
+//      t = 0;
+//    }
+//  }
+//}
 //function mousePressed() {
 //  if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
 //    let fs = fullscreen();
