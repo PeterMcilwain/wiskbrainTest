@@ -43,7 +43,6 @@ function draw() {
   image(faces[img], x, y, d, d);
   getBrain();
    image(brains[t], x + (bCoords[img].x * b), y + (bCoords[img].y * b), b, b);
-  //image(brains[t], x +, y, b, b);
 }
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
@@ -71,12 +70,12 @@ function getBrain() {
     }
   }
 }
-function mousePressed() {
-  if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
-    let fs = fullscreen();
-    fullscreen(!fs);
-  }
-}
-document.ontouchmove = function(event) {
-  event.preventDefault();
-};
+//function mousePressed() {
+//  if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
+//    let fs = fullscreen();
+//    fullscreen(!fs);
+//  }
+//}
+//document.ontouchmove = function(event) {
+//  event.preventDefault();
+//};
